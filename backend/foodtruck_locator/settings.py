@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'backend.urls'
+ROOT_URLCONF = 'foodtruck_locator.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +70,13 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend.wsgi.application'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+WSGI_APPLICATION = 'foodtruck_locator.wsgi.application'
 
 
 # Database
