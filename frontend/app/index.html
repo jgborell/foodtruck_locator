@@ -6,35 +6,47 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>mAPPetite</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+<!--  <link rel="stylesheet" href="bower_components/toastr/toastr.css"> -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgBAMAAAB54XoeAAAAD1BMVEX///8iHx8jHx8iHx8jHyCteoFxAAAAAnRSTlMAsyT7Lw4AAABrSURBVAiZ7czBCcAgDEBRV3CFrtAV3H8myUkaFDyUIvT9WxLySnnWouU4drPDNCDwh2CNgEAgEAgEAoHvgikgEJi7IyAQuNPyBQgEAoFAIBD4JbhxBQKBQCAQCAQCgUAgEHgmeEVAIFBSrgNTYGLIvZ6WOwAAAABJRU5ErkJggg==" rel="icon" type="image/x-icon" />
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
+<body ng-controller="AppCtrl" class="body">
+  <div class="container-fluid">
+    <div class="row" style="margin-top:10px;margin-bottom:10px;">
+        <div class="col-md-4">
+            <div class="col-md-4" style="padding:5px"><a href="#">mAPPetite</a></div>
+            <div class="col-md-4" style="padding:5px"><a href="#/food-trucks">Find a Food Truck <span class="sr-only">(current)</span></a></div>
+            <div class="col-md-4" style="padding:5px"><a href="#/add-food-truck">Wanna put 'yer food truck on THE MAP? Click here</a></div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-4"></div>
+            <div class="col-md-6"><a><h3 style="margin:0px;">Welcome</h3></a></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-1"><a ng-click="logout()">Logout</a></div>
+    </div>
+  </div><!-- /.container-fluid -->
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/lodash/lodash.min.js"></script>
+  <script src="bower_components/restangular/dist/restangular.min.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
+  <script src="food_truck_list/foodTruckList.js"></script>
+  <script src="food_truck_detail/foodTruckDetail.js"></script>
+  <script src="add_food_truck/addFoodTruck.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>

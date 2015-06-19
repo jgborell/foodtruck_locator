@@ -1,0 +1,19 @@
+<h1>{{ foodTruck.name }}</h1>
+<input ng-model="foodTruck.name">
+<br>
+<p>User Name: {{ foodTruck.username }}</p>
+<input ng-model="foodTruck.username">
+<br>
+<p>Twitter : {{ foodTruck.twitter_handle }}</p>
+<input ng-model="foodTruck.twitter_handle">
+<br>
+<p>Look us up : {{ foodTruck.website }}</p>
+<input ng-model="foodTruck.website" placeholder="website">
+<br>
+<p>Phone Number : {{ foodTruck.phone_number }}</p>
+<input ng-model="foodTruck.phone_number">
+
+<br>
+<br>
+<button class="btn btn-sm btn-success" ng-click="SaveEditedFoodTruck()"><span class="glyphicon glyphicon-floppy-disk"></span> Save </button>
+<button class="btn btn-sm btn-danger" ng-click="deleteFoodTruck()"><span class="glyphicon glyphicon-trash"></span> Delete Food Truck</button>
